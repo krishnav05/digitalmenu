@@ -3,7 +3,7 @@
 
 @section('content')
 	
-      <h1><center>Nope</center></h1>
+      <h1><center>Upload Item Details Here</center></h1>
       <br><br>
       <form>
       	<label for="item_id" style="margin-left: 20px;">Item Id</label>
