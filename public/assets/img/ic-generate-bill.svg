@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="114" height="100.247" viewBox="0 0 114 100.247">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="SVGID" width="42" height="41" transform="translate(895.34 496.923)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ic-generate-bill" transform="translate(-337 -637)">
+    <g id="Group_281" data-name="Group 281" transform="translate(-502.34 150.077)">
+      <g id="Rectangle_137" data-name="Rectangle 137">
+        <rect id="Rectangle_146" data-name="Rectangle 146" width="94" height="47" rx="6" transform="translate(849.34 513.923)" fill="#4d7cff"/>
+        <path id="Path_2845" data-name="Path 2845" d="M937.34,561.923h-82a7.008,7.008,0,0,1-7-7v-35a7.008,7.008,0,0,1,7-7h82a7.008,7.008,0,0,1,7,7v35A7.009,7.009,0,0,1,937.34,561.923Zm-82-47a5.006,5.006,0,0,0-5,5v35a5.006,5.006,0,0,0,5,5h82a5.006,5.006,0,0,0,5-5v-35a5.006,5.006,0,0,0-5-5Z"/>
+      </g>
+      <g id="Union_3" data-name="Union 3">
+        <path id="Path_2846" data-name="Path 2846" d="M931.858,585.434l-3.644-5.8a.61.61,0,0,1-.056-.1.735.735,0,0,1-.052.1l-3.647,5.8a1,1,0,0,1-1.691,0l-3.647-5.8c-.019-.032-.037-.066-.053-.1a.746.746,0,0,1-.055.1l-3.644,5.8a1,1,0,0,1-1.694,0l-3.644-5.8a1.056,1.056,0,0,1-.053-.1c-.015.031-.036.066-.054.1l-3.645,5.8a1,1,0,0,1-1.693,0l-3.645-5.8a.752.752,0,0,1-.056-.1.74.74,0,0,1-.054.1l-3.645,5.8a1,1,0,0,1-1.693,0l-3.645-5.8a.93.93,0,0,1-.052-.1c-.017.034-.035.068-.055.1l-3.645,5.8a1,1,0,0,1-1.693,0l-3.645-5.8c-.018-.031-.037-.062-.055-.1a.728.728,0,0,1-.052.1l-3.646,5.8a1,1,0,0,1-1.693,0l-3.646-5.8a.746.746,0,0,1-.055-.1.893.893,0,0,1-.055.1l-3.644,5.8a1,1,0,0,1-1.694,0l-3.642-5.8a.746.746,0,0,1-.055-.1.868.868,0,0,1-.054.1l-3.645,5.8a1,1,0,0,1-1.693,0l-2.791-4.44V499.923a6,6,0,0,1,6-6h68a6,6,0,0,1,6,6h0v81.07l-2.79,4.44a1,1,0,0,1-1.69,0Z" fill="#ffee85" stroke="#000" stroke-width="1"/>
+        <path id="Path_2847" data-name="Path 2847" d="M914.52,586.4a1.494,1.494,0,0,1-1.268-.7l-3.275-5.215L906.7,585.7a1.5,1.5,0,0,1-2.068.472,1.484,1.484,0,0,1-.472-.471l-3.277-5.216L897.61,585.7a1.5,1.5,0,0,1-2.54,0l-3.276-5.212L888.52,585.7a1.5,1.5,0,0,1-2.54,0l-3.276-5.213-3.276,5.212a1.5,1.5,0,0,1-2.54,0l-3.277-5.214-3.275,5.215a1.5,1.5,0,0,1-2.541,0l-3.274-5.214-3.275,5.213a1.5,1.5,0,0,1-2.068.472,1.485,1.485,0,0,1-.472-.471l-2.868-4.562V499.923a6.508,6.508,0,0,1,6.5-6.5h68a6.508,6.508,0,0,1,6.5,6.5v81.215l-2.866,4.561a1.5,1.5,0,0,1-2.536,0h0l-3.275-5.212-3.278,5.213a1.5,1.5,0,0,1-2.069.468,1.53,1.53,0,0,1-.467-.467l-3.28-5.215-3.273,5.213A1.5,1.5,0,0,1,914.52,586.4Zm-4.552-7.969.466.893,3.665,5.843a.507.507,0,0,0,.158.158.5.5,0,0,0,.688-.158l3.644-5.8.464-.954.47.912,3.668,5.842a.511.511,0,0,0,.158.156.5.5,0,0,0,.375.065.505.505,0,0,0,.312-.221l3.648-5.8.451-1.053.48,1.017,3.665,5.835a.506.506,0,0,0,.532.22.5.5,0,0,0,.313-.22l2.713-4.317V499.923a5.507,5.507,0,0,0-5.5-5.5h-68a5.507,5.507,0,0,0-5.5,5.5V580.85l2.714,4.319a.522.522,0,0,0,.158.156.5.5,0,0,0,.689-.157l3.644-5.8.471-.968.465.931,3.663,5.838a.508.508,0,0,0,.158.158.5.5,0,0,0,.688-.158l3.644-5.8.471-.968.465.931,3.667,5.838a.5.5,0,0,0,.847,0l3.647-5.8.442-1.033.486.989,3.67,5.845a.505.505,0,0,0,.156.156.5.5,0,0,0,.69-.157l3.644-5.8.464-.955.47.913,3.665,5.843a.523.523,0,0,0,.158.156.5.5,0,0,0,.69-.157l3.643-5.8.448-.979.482.931,3.673,5.849a.509.509,0,0,0,.157.156.5.5,0,0,0,.689-.157l3.644-5.8Z"/>
+      </g>
+      <g id="Line_42" data-name="Line 42">
+        <path id="Path_2848" data-name="Path 2848" d="M898.84,548.423h-35a1,1,0,0,1,0-2h35a1,1,0,0,1,0,2Z"/>
+      </g>
+      <g id="Line_47" data-name="Line 47">
+        <path id="Path_2849" data-name="Path 2849" d="M888.84,558.423h-25a1,1,0,0,1,0-2h25a1,1,0,0,1,0,2Z"/>
+      </g>
+      <g id="Line_50" data-name="Line 50">
+        <path id="Path_2850" data-name="Path 2850" d="M893.84,568.423h-30a1,1,0,0,1,0-2h30a1,1,0,0,1,0,2Z"/>
+      </g>
+      <g id="Line_43" data-name="Line 43">
+        <path id="Path_2851" data-name="Path 2851" d="M919.84,548.423h-5a1,1,0,0,1,0-2h5a1,1,0,0,1,0,2Z"/>
+      </g>
+      <g id="Line_45" data-name="Line 45">
+        <path id="Path_2852" data-name="Path 2852" d="M919.84,558.423h-5a1,1,0,0,1,0-2h5a1,1,0,0,1,0,2Z"/>
+      </g>
+      <g id="Line_48" data-name="Line 48">
+        <path id="Path_2853" data-name="Path 2853" d="M919.84,568.423h-5a1,1,0,0,1,0-2h5a1,1,0,0,1,0,2Z"/>
+      </g>
+      <g id="Line_44" data-name="Line 44">
+        <path id="Path_2854" data-name="Path 2854" d="M924.84,548.42a1,1,0,0,1-.38-.07,1.176,1.176,0,0,1-.33-.22,1.016,1.016,0,0,1-.22-.32,1.034,1.034,0,0,1,.22-1.09,1.027,1.027,0,0,1,1.42,0,1.011,1.011,0,0,1,.29.7.99.99,0,0,1-1,1Z"/>
+      </g>
+      <g id="Line_46" data-name="Line 46">
+        <path id="Path_2855" data-name="Path 2855" d="M924.84,558.42a1,1,0,0,1-.38-.07,1.176,1.176,0,0,1-.33-.22,1.016,1.016,0,0,1-.22-.32,1.034,1.034,0,0,1,.22-1.09,1.037,1.037,0,0,1,1.42,0,1.039,1.039,0,0,1,.29.7,1.046,1.046,0,0,1-.08.39,1.107,1.107,0,0,1-.21.32,1.189,1.189,0,0,1-.33.22A1,1,0,0,1,924.84,558.42Z"/>
+      </g>
+      <g id="Line_49" data-name="Line 49">
+        <path id="Path_2856" data-name="Path 2856" d="M924.84,568.42a1,1,0,0,1-.38-.07,1.176,1.176,0,0,1-.33-.22,1.012,1.012,0,0,1,0-1.41.834.834,0,0,1,.33-.22.991.991,0,0,1,.76,0,.911.911,0,0,1,.33.22,1.011,1.011,0,0,1,.29.7,1.046,1.046,0,0,1-.08.39,1.107,1.107,0,0,1-.21.32,1.189,1.189,0,0,1-.33.22A1,1,0,0,1,924.84,568.42Z"/>
+      </g>
+      <g id="Subtraction_6" data-name="Subtraction 6" opacity="0.1" style="isolation: isolate">
+        <path id="Path_2857" data-name="Path 2857" d="M935.832,563.423H856.837v-32.5a5.97,5.97,0,0,1,5.925-6h67.145a5.97,5.97,0,0,1,5.925,6Z" fill="#917d08"/>
+      </g>
+      <g id="Rectangle_136" data-name="Rectangle 136">
+        <path id="Path_2858" data-name="Path 2858" d="M848.34,487.923h96a8,8,0,0,1,8,8v43a8,8,0,0,1-8,8h-96a8,8,0,0,1-8-8v-43A8,8,0,0,1,848.34,487.923Z" fill="#3e3ef6"/>
+        <path id="Path_2859" data-name="Path 2859" d="M944.34,547.923h-96a9.01,9.01,0,0,1-9-9v-43a9.01,9.01,0,0,1,9-9h96a9.01,9.01,0,0,1,9,9v43A9.01,9.01,0,0,1,944.34,547.923Zm-96-59a7.008,7.008,0,0,0-7,7v43a7.008,7.008,0,0,0,7,7h96a7.008,7.008,0,0,0,7-7v-43a7.008,7.008,0,0,0-7-7Z"/>
+      </g>
+      <g id="Rectangle_141" data-name="Rectangle 141">
+        <g id="Rectangle_143" data-name="Rectangle 143">
+          <rect id="Rectangle_147" data-name="Rectangle 147" width="29" height="35" rx="2" transform="translate(853.34 499.923)" fill="#91fff8"/>
+        </g>
+        <g id="Rectangle_144" data-name="Rectangle 144">
+          <path id="Path_2860" data-name="Path 2860" d="M879.34,536.923h-23a5.006,5.006,0,0,1-5-5v-29a5.006,5.006,0,0,1,5-5h23a5.006,5.006,0,0,1,5,5v29A5.006,5.006,0,0,1,879.34,536.923Zm-23-36a2,2,0,0,0-2,2v29a2,2,0,0,0,2,2h23a2,2,0,0,0,2-2v-29a2,2,0,0,0-2-2Z" fill="#ffc1aa"/>
+        </g>
+      </g>
+      <g id="Group_292" data-name="Group 292">
+        <g id="Group_296" data-name="Group 296">
+          <g id="Group_295" data-name="Group 295" clip-path="url(#clip-path)">
+            <g id="Group_291" data-name="Group 291">
+              <g id="Repeat_Grid_7" data-name="Repeat Grid 7">
+                <g id="Group_282" data-name="Group 282">
+                  <g id="Rectangle_142" data-name="Rectangle 142">
+                    <rect id="Rectangle_148" data-name="Rectangle 148" width="10" height="11" rx="2" transform="translate(895.34 496.923)" fill="#fff8cb"/>
+                  </g>
+                </g>
+                <g id="Group_283" data-name="Group 283">
+                  <g id="Rectangle_142-2" data-name="Rectangle 142-2">
+                    <rect id="Rectangle_149" data-name="Rectangle 149" width="10" height="11" rx="2" transform="translate(911.34 496.923)" fill="#fff8cb"/>
+                  </g>
+                </g>
+                <g id="Group_284" data-name="Group 284">
+                  <g id="Rectangle_142-3" data-name="Rectangle 142-3">
+                    <rect id="Rectangle_150" data-name="Rectangle 150" width="10" height="11" rx="2" transform="translate(927.34 496.923)" fill="#fff8cb"/>
+                  </g>
+                </g>
+                <g id="Group_285" data-name="Group 285">
+                  <g id="Rectangle_142-4" data-name="Rectangle 142-4">
+                    <rect id="Rectangle_151" data-name="Rectangle 151" width="10" height="11" rx="2" transform="translate(895.34 511.923)" fill="#fff8cb"/>
+                  </g>
+                </g>
+                <g id="Group_286" data-name="Group 286">
+                  <g id="Rectangle_142-5" data-name="Rectangle 142-5">
+                    <rect id="Rectangle_152" data-name="Rectangle 152" width="10" height="11" rx="2" transform="translate(911.34 511.923)" fill="#fff8cb"/>
+                  </g>
+                </g>
+                <g id="Group_287" data-name="Group 287">
+                  <g id="Rectangle_142-6" data-name="Rectangle 142-6">
+                    <rect id="Rectangle_153" data-name="Rectangle 153" width="10" height="11" rx="2" transform="translate(927.34 511.923)" fill="#fff8cb"/>
+                  </g>
+                </g>
+                <g id="Group_288" data-name="Group 288">
+                  <g id="Rectangle_142-7" data-name="Rectangle 142-7">
+                    <rect id="Rectangle_154" data-name="Rectangle 154" width="10" height="11" rx="2" transform="translate(895.34 526.923)" fill="#fff8cb"/>
+                  </g>
+                </g>
+                <g id="Group_289" data-name="Group 289">
+                  <g id="Rectangle_142-8" data-name="Rectangle 142-8">
+                    <rect id="Rectangle_155" data-name="Rectangle 155" width="10" height="11" rx="2" transform="translate(911.34 526.923)" fill="#fff8cb"/>
+                  </g>
+                </g>
+                <g id="Group_290" data-name="Group 290">
+                  <g id="Rectangle_142-9" data-name="Rectangle 142-9">
+                    <rect id="Rectangle_156" data-name="Rectangle 156" width="10" height="11" rx="2" transform="translate(927.34 526.923)" fill="#fff8cb"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text id="PRINTING_..." data-name="PRINTING
+..." transform="translate(365 668) rotate(-90)" font-size="6" font-family="Oxygen-Bold, Oxygen" font-weight="700"><tspan x="-13.26" y="0">PRINTING</tspan><tspan x="-1.872" y="7">...</tspan></text>
+  </g>
+</svg>

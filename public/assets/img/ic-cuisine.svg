@@ -1,0 +1,18 @@
+<svg id="ic-cuisine" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="Group_211" data-name="Group 211" transform="translate(-212 -14)" opacity="0.7">
+    <g id="Rectangle_113" data-name="Rectangle 113" transform="translate(212 14)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="28" height="28" stroke="none"/>
+      <rect x="0.5" y="0.5" width="27" height="27" fill="none"/>
+    </g>
+    <g id="Group_154" data-name="Group 154" transform="translate(112.827 -442.173)">
+      <g id="Group_154-2" data-name="Group 154" transform="translate(101 458)">
+        <g id="Rectangle_3_">
+          <path id="Path_2567" data-name="Path 2567" d="M24.346,24.346H0V0H24.346ZM1.178,23.168h21.99V1.178H1.178Z"/>
+        </g>
+        <g id="Oval_3_" transform="translate(5.907 5.907)">
+          <circle id="Ellipse_29" data-name="Ellipse 29" cx="6.265" cy="6.265" r="6.265" transform="translate(0 0)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

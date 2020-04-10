@@ -1,0 +1,13 @@
+<svg id="ic-accessibility" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="Group_214" data-name="Group 214" transform="translate(-700.883 -861.883)" opacity="0.7">
+    <g id="Rectangle_107" data-name="Rectangle 107" transform="translate(700.883 861.883)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="28" height="28" stroke="none"/>
+      <rect x="0.5" y="0.5" width="27" height="27" fill="none"/>
+    </g>
+    <g id="Group_174" data-name="Group 174" transform="translate(705.262 863.838)">
+      <path id="Path_2573" data-name="Path 2573" d="M-931.084,1005.932a4.927,4.927,0,0,1-4.921-4.921,4.892,4.892,0,0,1,2.2-4.088l-.151-2.423a7.126,7.126,0,0,0-4.239,6.511,7.124,7.124,0,0,0,7.116,7.116,7.116,7.116,0,0,0,6.94-5.552h-2.3A4.93,4.93,0,0,1-931.084,1005.932Z" transform="translate(938.2 -984.154)"/>
+      <path id="Path_2574" data-name="Path 2574" d="M-901.3,993.436l-1.767-7.949a2.2,2.2,0,0,0-1.893-1.691l-4.517-.454a.513.513,0,0,1-.479-.454l-.177-.984,4.34.076a.388.388,0,0,0,.379-.379v-.757a.357.357,0,0,0-.328-.353l-4.719-.555-.4-2.422a1.683,1.683,0,0,0-1.666-1.413h-1.085a1.7,1.7,0,0,0-1.691,1.792l.429,6.687a2.731,2.731,0,0,0,2.725,2.549h6.233a.545.545,0,0,1,.53.4l1.59,6.107a.834.834,0,0,0,.807.631h1.06A.684.684,0,0,0-901.3,993.436Z" transform="translate(921.086 -970.397)"/>
+      <circle id="Ellipse_43" data-name="Ellipse 43" cx="2.498" cy="2.498" r="2.498" transform="translate(5.198 0)"/>
+    </g>
+  </g>
+</svg>
