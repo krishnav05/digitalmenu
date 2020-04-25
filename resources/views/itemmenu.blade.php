@@ -259,7 +259,7 @@
 </div>
         @if($idata['recommended_total_items'] !== 0)
         <!-- Recommended box Start -->
-        <div class="recommended-box mt-4" style="display: none;">
+        <div class="recommended-box mt-4">
           <div class="container">
             <h5 class="mb-4">Recommended with {{$idata['item_name']}}</h5>
             <div class="recommend">

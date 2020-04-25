@@ -29,7 +29,7 @@ $('.firstadd').on('click',function(event){
         $(nu).hide("fast");
         $(nu).next("div").show("fast");
         if($(id).parent("div").parent("div").parent("div").parent("div").next("div").hasClass("recommended-box")){
-         $(id).parent("div").parent("div").parent("div").parent("div").next("div").css('display','block');   
+         // $(id).parent("div").parent("div").parent("div").parent("div").next("div").css('display','block');   
         }  
     }
 });
