@@ -7,9 +7,9 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
     <title>Digital Menu</title>
   </head>
   <body>
@@ -52,21 +52,21 @@
             <h5 class="small detail-page-tags"> North Indian | Snacks </h5>
           </div>
           <div class="col-sm-2">
-               <button type="button" class="btn btn-outline-primary add-item-btn btn-sm w-auto mt-2"> <img src="assets/img/ic-plus.svg" class="d-inline"> ADD</button>
+               <button type="button" class="btn btn-outline-primary add-item-btn btn-sm w-auto mt-2"> <img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"> ADD</button>
                   <div class="input-group mt-2">
                      
-                          <button class="btn btn-light btn-sm float-left" id="minus-btn"><img src="assets/img/ic-minus.svg" class="d-inline"></button>
+                          <button class="btn btn-light btn-sm float-left" id="minus-btn"><img src="{{asset('assets/img/ic-minus.svg')}}" class="d-inline"></button>
                       
                           <input type="number" id="qty_input" class="add-plus-min float-left" value="0" min="0">
                       
-                          <button class="btn btn-light btn-sm float-left" id="plus-btn"><img src="assets/img/ic-plus.svg" class="d-inline"></button>
+                          <button class="btn btn-light btn-sm float-left" id="plus-btn"><img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"></button>
                       
                   </div>
           </div>
        </div>
        <div class="row mt-3">
          <div class="col-sm-12 hero">
-           <img src="assets/img/menu-item-detail-pic.jpg" class="img-fluid" alt="Detial Picture">
+           <img src="{{asset('assets/img/menu-item-detail-pic.jpg')}}" class="img-fluid" alt="Detial Picture">
          </div>
        </div>
    </div>
@@ -93,7 +93,7 @@
          </div>
          <div class="col-sm-3">
            <h3 class="p-2 prep-box">
-             <div class="col-sm-12"> <img src="assets/img/prep-time.svg"> </div>
+             <div class="col-sm-12"> <img src="{{asset('assets/img/prep-time.svg')}}"> </div>
              <span class="col-sm-12"> Time of Prepration </span>
              <span class="col-sm-12 prep-time"> 34 </span>
            </h3>
@@ -107,23 +107,23 @@
         <h2> Ingredients </h2>
         <div class="row">
             <div class="col">
-              <img src="assets/img/ic-ginger.svg"> <br>
+              <img src="{{asset('assets/img/ic-ginger.svg')}}"> <br>
               Ginger
             </div>
             <div class="col">
-              <img src="assets/img/ic-chilli.svg"> <br>
+              <img src="{{asset('assets/img/ic-chilli.svg')}}"> <br>
               Chilli
             </div>
             <div class="col">
-              <img src="assets/img/ic-panner.svg"> <br>
+              <img src="{{asset('assets/img/ic-panner.svg')}}"> <br>
               Paneer
             </div>
             <div class="col">
-              <img src="assets/img/ic-oil.svg"> <br>
+              <img src="{{asset('assets/img/ic-oil.svg')}}"> <br>
               Olive Oil
             </div>
             <div class="col">
-              <img src="assets/img/ic-methi.svg"> <br>
+              <img src="{{asset('assets/img/ic-methi.svg')}}"> <br>
               Dry Fenugreek
               Leaves(Methi)
             </div>
@@ -177,7 +177,7 @@ Paneer tikka is an Indian dish made from chunks of paneer marinated in spices an
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/custom-menu.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/custom-menu.js') }}"></script>
     
   </body>
 </html>

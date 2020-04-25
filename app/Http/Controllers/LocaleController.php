@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 use App\BusinessTobeRegistered;
 use Illuminate\Support\Str;
 
-
-class CoverController extends Controller
+class LocaleController extends Controller
 {
     //
-    public function cover($country,$slug){
+    public function change_language($country,$slug,$locale){
+
     	//check for valid url
     	$ifexist = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->first();
 
@@ -18,6 +19,7 @@ class CoverController extends Controller
     	{
     		return abort(404);
     	}
-    	return view('cover');
+    	Session::put('locale', $locale);
+    	return redirect()->back();
     }
 }

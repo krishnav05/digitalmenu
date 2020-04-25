@@ -7,9 +7,9 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
     <title>Digital Menu</title>
   </head>
   <body>
@@ -56,7 +56,7 @@ return lottie;
     anim = lottie.loadAnimation(params);
 
     anim.addEventListener('complete', function(){
-        window.location = "/billcopy";
+        window.location = "billcopy";
     });
 
 </script>   

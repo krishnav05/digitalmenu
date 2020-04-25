@@ -837,3 +837,32 @@ box-shadow: 0px 3px 6px #ECD5A02B;
 height: 50px;
 border-radius: 6px;
 margin-right: 10px;}
+
+
+/*Recommended Box Start Here*/
+.recommended-box{
+					background: #FDFCF7;
+					padding: 30px;
+					position: relative;
+					width: 112%;
+					left: -6%;
+				}
+.recommended-box h5{
+						font-family: 'Playfair Display';
+				   }
+.recommended-box .recommend-item-img{
+								position: relative;
+						  }
+.recommended-box .item-pic{
+								border-radius: 6px;
+						  }
+.recommended-box .non-veg-tag{
+								position: absolute;
+								top: 10px;
+								left: 10px;
+						  }
+.recommended-box .more{
+								position: absolute;
+								bottom:0px;
+								right: 0px;
+						  }

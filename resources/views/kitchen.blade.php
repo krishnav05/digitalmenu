@@ -8,9 +8,9 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
     <title>Digital Menu</title>
   </head>
   <body class="kitchen-bg">
@@ -40,7 +40,7 @@
        @if($total_items == 0)
        <div class="row mt-5">
          <div class="col-sm-12 text-center">
-           <img src="assets/img/ic-kitchen.svg" class="">
+           <img src="{{asset('assets/img/ic-kitchen.svg')}}" class="">
          </div>
          <div class="col-sm-12 text-center mt-3">
            <h1>The Kitchen Is Empty</h1>
@@ -48,19 +48,19 @@
        </div>
        <div class="container mt-5 pt-3">
          <div class="row mt-5">
-           <div class="col-sm-12 text-center"> <img src="assets/img/ic-kitchen-empty.png"> </div>
+           <div class="col-sm-12 text-center"> <img src="{{asset('assets/img/ic-kitchen-empty.png')}}"> </div>
          </div>
        </div>
      
         
        <div class="row mt-5">
-         <input type="submit" name="" value="GO TO MENU" class="btn btn-primary col mt-5" onclick="window.location.href = '/itemmenu';">
+         <input type="submit" name="" value="GO TO MENU" class="btn btn-primary col mt-5" onclick="window.location.href = 'itemmenu';">
         
        </div>
        @else
        <div class="row mt-5">
          <div class="col-sm-12 text-center">
-           <img src="assets/img/ic-kitchen.svg" class="">
+           <img src="{{asset('assets/img/ic-kitchen.svg')}}" class="">
          </div>
          <div class="col-sm-12 text-center mt-3">
            <h1>Kitchen</h1>
@@ -83,8 +83,8 @@
               <tr>
                 <td class="text-center"> {{$count++}} </td>
                 <td>
-                  <img src="assets/img/fooditems/{{$citems->image}}" class="menu-item-img float-left d-inline m-3 mb-5" width="60" height="60">
-                   <h2 class="change-txt-size"><img src="assets/img/ic-{{$citems->item_vegetarian}}.svg" class="veg-badge mr-1 d-inline"> <a>{{$citems->item_name}}</a></h2>
+                  <img src="{{asset('assets/img/fooditems/'.$citems->image)}}" class="menu-item-img float-left d-inline m-3 mb-5" width="60" height="60">
+                   <h2 class="change-txt-size"><img src="{{asset('assets/img/ic-'.$citems->item_vegetarian.'.svg')}}" class="veg-badge mr-1 d-inline"> <a>{{$citems->item_name}}</a></h2>
               
              <p class="item-contains change-txt-size"> 
               @foreach($addons as $item_addon)
@@ -108,16 +108,16 @@
             
               
              </p>
-             <p class="mb-0"> <a href="" class="customize" data-toggle="modal" data-target="#n{{$k_key->id}}">Customize <img src="assets/img/ic-customize.svg" class="d-inline"> </a> </p>
+             <p class="mb-0"> <a href="" class="customize" data-toggle="modal" data-target="#n{{$k_key->id}}">Customize <img src="{{asset('assets/img/ic-customize.svg')}}" class="d-inline"> </a> </p>
              <div class="row kitchne-add-to">
                 <div class="col-sm-12 pl-0">
                             <div class="input-group kitchen-margin" style="display: block;margin-left: 108px;">
                                
-                                    <button class="btn btn-light btn-sm float-left kitchen-minus" id="{{$k_key->id}}"><img src="assets/img/ic-minus.svg" class="d-inline"></button>
+                                    <button class="btn btn-light btn-sm float-left kitchen-minus" id="{{$k_key->id}}"><img src="{{asset('assets/img/ic-minus.svg')}}" class="d-inline"></button>
                                 
                                 <input type="number" id="qty_input" class="add-plus-min float-left" value="{{$k_key->quantity}}" min="0" disabled>
                                 
-                                    <button class="btn btn-light btn-sm float-left kitchen-plus" id="{{$k_key->id}}"><img src="assets/img/ic-plus.svg" class="d-inline"></button>
+                                    <button class="btn btn-light btn-sm float-left kitchen-plus" id="{{$k_key->id}}"><img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"></button>
                                 
                             </div>
                 </div>
@@ -143,7 +143,7 @@
        @endif
        <div class="row mt-3 text-center">
           <p class="col text-center">
-           Please call the server to get your order confirmed <a href="#"><img src="assets/img/ic-call-server-2.svg" class="d-inline"></a>
+           Please call the server to get your order confirmed <a href="#"><img src="{{asset('assets/img/ic-call-server-2.svg')}}" class="d-inline"></a>
          </p>
        </div>
 
@@ -189,7 +189,7 @@
     <form id="form{{$k_key->id}}">
     <div class="modal-content animate-bottom">
       <div class="modal-header">
-        <h5><img src="assets/img/ic-{{$citems->item_vegetarian}}.svg" class="veg-badge mr-1 d-inline"> {{$citems->item_name}}</h5>
+        <h5><img src="{{asset('assets/img/ic-'.$citems->item_vegetarian.'.svg')}}" class="veg-badge mr-1 d-inline"> {{$citems->item_name}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -205,7 +205,7 @@
                 @if($idata->item_id == $addons->item_id)
                 <tr>
                   <td>
-                    <img src="assets/img/ic-veg.svg" class="veg-badge mr-1 d-inline"> <input class="d-inline" type="checkbox" id="defaultCheck1" name="{{$addons['addon_name']}}"> {{$addons['addon_name']}}  
+                    <img src="{{asset('assets/img/ic-veg.svg')}}" class="veg-badge mr-1 d-inline"> <input class="d-inline" type="checkbox" id="defaultCheck1" name="{{$addons['addon_name']}}"> {{$addons['addon_name']}}  
                   </td>
                   <td class="item-price">
                     ₹ {{$addons['addon_price']}}
@@ -246,7 +246,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/custom-menu.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/custom-menu.js') }}"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         $('input').keyup(function(event){
@@ -276,7 +276,7 @@ $('.kitchen-plus').on('click',function(event) {
   var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
   $.ajax({
                     /* the route pointing to the post function */
-                    url: '/kitchen',
+                    url: 'kitchen',
                     type: 'POST',
                     /* send the csrf-token and the input to the controller */
                     data: {_token: CSRF_TOKEN, id:this.id, action:'kitchenadd'},
@@ -299,7 +299,7 @@ $('.kitchen-minus').on('click',function(event) {
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
   $.ajax({
                     /* the route pointing to the post function */
-                    url: '/kitchen',
+                    url: 'kitchen',
                     type: 'POST',
                     /* send the csrf-token and the input to the controller */
                     data: {_token: CSRF_TOKEN, id:this.id, action:'kitchenminus'},
@@ -323,7 +323,7 @@ $('.kitchencustomize').on('click',function(event){
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
                     /* the route pointing to the post function */
-                    url: '/kitchen',
+                    url: 'kitchen',
                     type: 'POST',
                     /* send the csrf-token and the input to the controller */
                     data: {_token: CSRF_TOKEN, id:this.id, action:'kitchencustomize',totaldata: data},
@@ -347,7 +347,7 @@ $('.kitchencustomize').on('click',function(event){
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         $.ajax({
           /* the route pointing to the post function */
-          url: '/ordersentkitchen',
+          url: 'ordersentkitchen',
           type: 'POST',
           /* send the csrf-token and the input to the controller */
           data: {_token: CSRF_TOKEN,totaldata: data},

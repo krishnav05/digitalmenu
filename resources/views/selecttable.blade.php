@@ -8,9 +8,9 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
     <title>Digital Menu</title>
   </head>
   <body class="select-table">
@@ -26,9 +26,9 @@
           </div>
           <h4 class="text-center small col-sm-12 mt-4">Sort tables by</h4>
           <div class="col-sm-12 text-center mt-2 table-sort">
-             <a href="/" class="btn btn-outline-secondary @if(session()->has('message')) @else active @endif m-2">All</a>
-             <a href="{{ url('sort/empty') }}" class="btn btn-outline-secondary empty-tbl m-2 @if(session('message') == 'empty') active @endif">Empty</a>
-             <a href="{{ url('sort/occupied') }}" class="btn btn-outline-secondary occupied-tbl m-2 @if(session('message') == 'occupied') active @endif">Occupied</a>
+             <a href="{{Request::url()}}" class="btn btn-outline-secondary @if(session()->has('message')) @else active @endif m-2">All</a>
+             <a href="{{Request::url()}}/sort/empty" class="btn btn-outline-secondary empty-tbl m-2 @if(session('message') == 'empty') active @endif">Empty</a>
+             <a href="{{Request::url()}}/sort/occupied" class="btn btn-outline-secondary occupied-tbl m-2 @if(session('message') == 'occupied') active @endif">Occupied</a>
           </div>
        </div>
        
@@ -123,7 +123,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/custom-menu.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/custom-menu.js') }}"></script>
     <!-- enter server pin -->
     <script type="text/javascript">
       $(document).ready(function(){
@@ -155,7 +155,7 @@
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         $.ajax({
           /* the route pointing to the post function */
-          url: '/selectoption',
+          url: '{{Request::url()}}/selectoption',
           type: 'POST',
           /* send the csrf-token and the input to the controller */
           data: {_token: CSRF_TOKEN,totaldata: data},
@@ -163,7 +163,7 @@
           /* remind that 'data' is the response of the AjaxController */
           success: function (data) {
             if(data.status == 'success'){
-              window.location = data.url;
+              window.location = '{{Request::url()}}/'+data.url;
             }
             else if(data.status == 'wrong pin'){
               $('#pin-status').html(data.message);

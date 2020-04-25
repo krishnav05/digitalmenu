@@ -12,20 +12,36 @@ use App\Kitchen;
 use Session;
 use DB;
 use App\HindiCategoryItem;
+use App\BusinessTobeRegistered;
+use Illuminate\Support\Str;
+use App\RecommendationItem;
 
 class CategoryController extends Controller
 {
     //
-	public function category_names()
+	public function category_names($country,$slug)
 	{	
+		//check for valid url
+    	$ifexist = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->first();
+
+    	if($ifexist == null)
+    	{
+    		return abort(404);
+    	}
+    	//show tables belonging to the restraunt
+    	$business_id = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->pluck('id');
+
+
 		if (app()->getLocale() == 'en') {
 
-			$category_items = CategoryItem::all();
-			$category_names = Category::all();
-			$item_details = ItemDetail::all();
-			$item_addons = ItemAddon::all();
+			$recommended_items = RecommendationItem::where('business_id',$business_id[0])->get();
+
+			$category_items = CategoryItem::where('business_id',$business_id[0])->get();
+			$category_names = Category::where('business_id',$business_id[0])->get();
+			$item_details = ItemDetail::where('business_id',$business_id[0])->get();
+			$item_addons = ItemAddon::where('business_id',$business_id[0])->get();
 			$table_number = Session::get('table');
-			$kitchen_status = Kitchen::where('table_number',$table_number)->where('confirm_status',null)->get();
+			$kitchen_status = Kitchen::where('business_id',$business_id[0])->where('table_number',$table_number)->where('confirm_status',null)->get();
 			foreach ($category_items as $key) {
 				# code...
 				$key['item_quantity'] = '';
@@ -39,21 +55,21 @@ class CategoryController extends Controller
 
 			}
 
-			$total_items = DB::table("kitchen")->where("table_number","=",$table_number)->where('confirm_status',null)->get()->sum("item_quantity");
+			$total_items = DB::table("kitchen")->where('business_id',$business_id[0])->where("table_number","=",$table_number)->where('confirm_status',null)->get()->sum("item_quantity");
 
-			return view('itemmenu',['category_names'	=> $category_names, 'category_items' => $category_items, 'item_details' => $item_details, 'item_addons' => $item_addons,'kitchen_status' => $kitchen_status,'total_items' => $total_items]);
+			return view('itemmenu',['category_names'	=> $category_names, 'category_items' => $category_items, 'item_details' => $item_details, 'item_addons' => $item_addons,'kitchen_status' => $kitchen_status,'total_items' => $total_items,'recommended_items' => $recommended_items]);
 		}
 		elseif (app()->getLocale() == 'hi') {
 
-			$category_items = CategoryItem::all();
-			$category_names = Category::all();
-			$hindi_category = HindiCategory::all();
-			$hindi_category_items = HindiCategoryItem::all();
-			$item_details = ItemDetail::all();
-			$item_addons = ItemAddon::all();
+			$category_items = CategoryItem::where('business_id',$business_id[0])->get();
+			$category_names = Category::where('business_id',$business_id[0])->get();
+			$hindi_category = HindiCategory::where('business_id',$business_id[0])->get();
+			$hindi_category_items = HindiCategoryItem::where('business_id',$business_id[0])->get();
+			$item_details = ItemDetail::where('business_id',$business_id[0])->get();
+			$item_addons = ItemAddon::where('business_id',$business_id[0])->get();
 			$table_number = Session::get('table');
-			$kitchen_status = Kitchen::where('table_number',$table_number)->where('confirm_status',null)->get();
-			$total_items = DB::table("kitchen")->where("table_number","=",$table_number)->where('confirm_status',null)->get()->sum("item_quantity");
+			$kitchen_status = Kitchen::where('business_id',$business_id[0])->where('table_number',$table_number)->where('confirm_status',null)->get();
+			$total_items = DB::table("kitchen")->where('business_id',$business_id[0])->where("table_number","=",$table_number)->where('confirm_status',null)->get()->sum("item_quantity");
 			foreach ($category_names as $key) {
     
 				foreach ($hindi_category as $value) {

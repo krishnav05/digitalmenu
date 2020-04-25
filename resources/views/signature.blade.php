@@ -7,9 +7,9 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
     <title>Digital Menu</title>
     <style>
     .body,
@@ -73,7 +73,7 @@
     </div>
     <div class="row fixed-bottom mb-5">
       <div class="col-sm-12 text-center">
-          <input type="submit" name="" value="CONFIRM SIGNATURE" class="btn btn-primary col-sm-10 mr-auto" onclick="window.location = '/processingpayment';">
+          <input type="submit" name="" value="CONFIRM SIGNATURE" class="btn btn-primary col-sm-10 mr-auto" onclick="window.location = 'processingpayment';">
       </div>
     </div>
   </div>
@@ -90,6 +90,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
    
-    <script src="assets/js/signature.js"></script>
+    <script src="{{ asset('assets/js/signature.js') }}"></script>
   </body>
 </html>

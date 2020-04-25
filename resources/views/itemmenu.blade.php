@@ -8,9 +8,10 @@
   <meta name="robots" content="noindex, nofollow" />
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/slick-theme.css')}}"/>
   <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
   <title>Digital Menu</title>
 </head>
 <body>
@@ -133,9 +134,9 @@
       </div>
       <div class="tab-pane fade" id="pills-all-cuisines" role="tabpanel" aria-labelledby="pills-all-cuisines-tab">
        <div class="row all-cuisines">
-        <a href="#" class="active helpmakeactive col-sm-4" id="all_veg_nveg"> <img src="assets/img/ic-veg.svg" class="d-inline"> <img src="assets/img/ic-nonveg.svg" class="d-inline mr-1"> All Cuisines </a>
-        <a href="#" class="helpmakeactive col-sm-4" id="veg_only"> <img src="assets/img/ic-veg.svg" class="d-inline mr-1"> Vegetarian </a>
-        <a href="#" class="helpmakeactive col-sm-4" id ="non_veg_only"> <img src="assets/img/ic-nonveg.svg" class="d-inline mr-1"> Non-Vegetarian  </a>
+        <a href="#" class="active helpmakeactive col-sm-4" id="all_veg_nveg"> <img src="{{asset('assets/img/ic-veg.svg')}}" class="d-inline"> <img src="{{asset('assets/img/ic-nonveg.svg')}}" class="d-inline mr-1"> All Cuisines </a>
+        <a href="#" class="helpmakeactive col-sm-4" id="veg_only"> <img src="{{asset('assets/img/ic-veg.svg')}}" class="d-inline mr-1"> Vegetarian </a>
+        <a href="#" class="helpmakeactive col-sm-4" id ="non_veg_only"> <img src="{{asset('assets/img/ic-nonveg.svg')}}" class="d-inline mr-1"> Non-Vegetarian  </a>
       </div>
     </div>
     <div class="tab-pane fade menu-item-search autocomplete" id="pills-item-search" role="tabpanel" aria-labelledby="pills-item-search-tab">
@@ -162,8 +163,8 @@
   <div class="tab-pane fade choose-lang" id="pills-choose-lang" role="tabpanel" aria-labelledby="pills-choose-lang-tab">
     <div class="container">
       <div class="row text-center">
-        <a href="{{ url('locale/en') }}" class="col-sm-6 active" id="lang-en"> English </a>
-        <a href="{{ url('locale/hi') }}" class="col-sm-6" id="lang-hi"> हिन्दी </a>
+        <a href="locale/en" class="col-sm-6 active" id="lang-en"> English </a>
+        <a href="locale/hi" class="col-sm-6" id="lang-hi"> हिन्दी </a>
       </div>
     </div>
   </div>
@@ -189,19 +190,19 @@
   <div class="row pl-5 pt-5 pr-5 pb-2 {{$idata['item_vegetarian']}}">
     
     <a class="col-sm-3 ml-4" href="fooditemdetail/{{$idata['item_id']}}">
-     <img src="assets/img/fooditems/{{$idata['image']}}" class="menu-item-img img-fluid" >
-     <img src="assets/img/ic-food-more.svg" class="ic-food-more">
+     <img src="{{asset('assets/img/fooditems/'.$idata['image'].'')}}" class="menu-item-img img-fluid" >
+     <img src="{{asset('assets/img/ic-food-more.svg')}}" class="ic-food-more">
 
    </a>
 
    
    <div class="col-sm-6">
-     <h2 class="change-txt-size"><img src="assets/img/ic-{{$idata['item_vegetarian']}}.svg" class="veg-badge mr-1 d-inline"><a href="fooditemdetail/{{$idata['item_id']}}"> {{$idata['item_name']}}</a></h2>
+     <h2 class="change-txt-size"><img src="{{asset('assets/img/ic-'.$idata['item_vegetarian'].'.svg')}}" class="veg-badge mr-1 d-inline"><a href="fooditemdetail/{{$idata['item_id']}}"> {{$idata['item_name']}}</a></h2>
      <p class="menu-item-short-desc mb-1 change-txt-size"> {{$idata['item_description']}} </p>
      <p class="item-contains change-txt-size"> 
       @foreach($item_details as $itemdetail)
       @if($idata['item_id'] == $itemdetail['item_id'])
-      <img src="assets/img/{{$itemdetail['item_detail_image']}}" class="d-inline"> {{$itemdetail['item_attribute']}}
+      <img src="{{asset('assets/img/'.$itemdetail['item_detail_image'].'')}}" class="d-inline"> {{$itemdetail['item_attribute']}}
       @endif
       <!-- <img src="assets/img/ic-nuts.svg" class="d-inline"> Contains Nuts |  -->
       <!-- <img src="assets/img/ic-pork.svg" class=" d-inline"> Contains Pork  -->
@@ -213,14 +214,14 @@
       <div class="col-sm-5">
        
         <button type="button" class="btn btn-outline-primary add-item-btn btn-sm w-auto" id="{{$idata['item_id']}}" data-toggle="modal" data-target="#n{{$idata['item_id']}}"  style="
-        display: none;"> <img src="assets/img/ic-plus.svg" class="d-inline"> ADD</button>
+        display: none;"> <img src="/assets/img/ic-plus.svg" class="d-inline"> ADD</button>
         <div class="input-group" style="display: block;">
          
-          <button class="btn btn-light btn-sm float-left minus" id="{{$idata['item_id']}}"><img src="assets/img/ic-minus.svg" class="d-inline"></button>
+          <button class="btn btn-light btn-sm float-left minus" id="{{$idata['item_id']}}"><img src="{{asset('assets/img/ic-minus.svg')}}" class="d-inline"></button>
           
           <input type="number" id="qty_input{{$idata['item_id']}}" class="add-plus-min float-left" value="{{$idata['item_quantity']}}" min="0" disabled>
           
-          <button class="btn btn-light btn-sm float-left plus" id="{{$idata['item_id']}}"><img src="assets/img/ic-plus.svg" class="d-inline"></button>
+          <button class="btn btn-light btn-sm float-left plus" id="{{$idata['item_id']}}"><img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"></button>
           
         </div>
       </div> 
@@ -233,14 +234,14 @@
           <div class="row">
       <div class="col-sm-5">
        
-        <button type="button" class="btn btn-outline-primary add-item-btn btn-sm w-auto" id="{{$idata['item_id']}}" data-toggle="modal" data-target="#n{{$idata['item_id']}}"> <img src="assets/img/ic-plus.svg" class="d-inline"> ADD</button>
+        <button type="button" class="btn btn-outline-primary add-item-btn btn-sm w-auto" id="{{$idata['item_id']}}" data-toggle="modal" data-target="#n{{$idata['item_id']}}"> <img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"> ADD</button>
         <div class="input-group">
          
-          <button class="btn btn-light btn-sm float-left minus" id="{{$idata['item_id']}}"><img src="assets/img/ic-minus.svg" class="d-inline"></button>
+          <button class="btn btn-light btn-sm float-left minus" id="{{$idata['item_id']}}"><img src="{{asset('assets/img/ic-minus.svg')}}" class="d-inline"></button>
           
           <input type="number" id="qty_input{{$idata['item_id']}}" class="add-plus-min float-left" value="0" min="0" disabled>
           
-          <button class="btn btn-light btn-sm float-left plus" id="{{$idata['item_id']}}"><img src="assets/img/ic-plus.svg" class="d-inline"></button>
+          <button class="btn btn-light btn-sm float-left plus" id="{{$idata['item_id']}}"><img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"></button>
           
         </div>
       </div> 
@@ -256,13 +257,70 @@
  </div>
  
 </div>
+        @if($idata['recommended_total_items'] !== 0)
+        <!-- Recommended box Start -->
+        <div class="recommended-box mt-4" style="display: none;">
+          <div class="container">
+            <h5 class="mb-4">Recommended with {{$idata['item_name']}}</h5>
+            <div class="recommend">
+              @foreach($recommended_items as $rec_key)
+                @if($rec_key['item_id'] == $idata['item_id'])
+                  @foreach($category_items as $match_key)
+                    @if($match_key['item_id'] == $rec_key['recommended_item_id'])
+                   <div class="col">
+                    <a class="recommend-item-img d-block" href="fooditemdetail/{{$match_key['item_id']}}">
+                      <img src="/assets/img/fooditems/{{$match_key['image']}}" class="img-fluid item-pic">
+                      <img src="/assets/img/ic-{{$match_key['item_vegetarian']}}.svg" class="non-veg-tag">
+                      <img src="/assets/img/ic-food-more.svg" class="more">
+                    </a>
+                    <h6 class="mt-2"><a href="fooditemdetail/{{$match_key['item_id']}}"> {{$match_key['item_name']}} </a></h6>
+                    <p class="menu-item-short-desc change-txt-size mb-1"> {{$match_key['item_description']}}  </p>
+                    <p class="item-contains change-txt-size"> <img src="/assets/img/ic-spicy.svg" class="d-inline"> Spicy | <img src="/assets/img/ic-nuts.svg" class="d-inline"> Contains Nuts | <img src="/assets/img/ic-pork.svg" class=" d-inline"> Contains Pork </p>
+                    <div>
+                      @if($match_key['item_quantity'] != '')
+
+        <button type="button" class="btn btn-outline-primary add-item-btn btn-sm w-auto" id="rec_{{$match_key['item_id']}}" data-toggle="modal" data-target="#n{{$match_key['item_id']}}"  style="
+        display: none;"> <img src="/assets/img/ic-plus.svg" class="d-inline"> ADD</button>
+        <div class="input-group" style="display: block;">
+         
+          <button class="btn btn-light btn-sm float-left minus" id="rec_{{$match_key['item_id']}}"><img src="{{asset('assets/img/ic-minus.svg')}}" class="d-inline"></button>
+          
+          <input type="number" id="rec_qty_input{{$match_key['item_id']}}" class="add-plus-min float-left" value="{{$match_key['item_quantity']}}" min="0" disabled>
+          
+          <button class="btn btn-light btn-sm float-left plus" id="rec_{{$match_key['item_id']}}"><img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"></button>
+          
+    @else
+       
+        <button type="button" class="btn btn-outline-primary add-item-btn btn-sm w-auto" id="rec_{{$match_key['item_id']}}" data-toggle="modal" data-target="#n{{$match_key['item_id']}}"> <img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"> ADD</button>
+        <div class="input-group">
+         
+          <button class="btn btn-light btn-sm float-left minus" id="rec_{{$match_key['item_id']}}"><img src="{{asset('assets/img/ic-minus.svg')}}" class="d-inline"></button>
+          
+          <input type="number" id="rec_qty_input{{$match_key['item_id']}}" class="add-plus-min float-left" value="0" min="0" disabled>
+          
+          <button class="btn btn-light btn-sm float-left plus" id="rec_{{$match_key['item_id']}}"><img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"></button>                  
+    
+    @endif
+                    </div>
+                    <span class="item-price change-txt-size float-right"> {{$match_key['item_price']}} </span>          
+                  </div>
+                </div>
+                @endif
+              @endforeach
+            @endif
+          @endforeach
+        </div>  
+        </div>
+        </div>
+        <!-- Recommended box end -->
+        @endif
 @endif
 @endforeach
 </main>
 @endforeach
 <a href="kitchen" class="kitchen-cart">
   <span class="item-count-badge" id="kitchen_total">{{$total_items}}</span>
-  <img src="assets/img/ic-kitchen-cart.svg" width="46" height="55">
+  <img src="{{asset('assets/img/ic-kitchen-cart.svg')}}" width="46" height="55">
 </a>
 
 <!-- modal popup -->
@@ -272,7 +330,7 @@
     <form id="form{{$idata['item_id']}}">
     <div class="modal-content animate-bottom">
       <div class="modal-header">
-        <h5><img src="assets/img/ic-{{$idata['item_vegetarian']}}.svg" class="veg-badge mr-1 d-inline"> {{$idata['item_name']}}</h5>
+        <h5><img src="{{asset('assets/img/ic-'.$idata['item_vegetarian'].'.svg')}}" class="veg-badge mr-1 d-inline"> {{$idata['item_name']}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -288,7 +346,7 @@
                 @if($idata['item_id'] == $addons['item_id'])
                 <tr>
                   <td>
-                    <img src="assets/img/ic-veg.svg" class="veg-badge mr-1 d-inline"> <input class="d-inline" type="checkbox" id="defaultCheck1" name="{{$addons['addon_name']}}"> {{$addons['addon_name']}}  
+                    <img src="{{asset('assets/img/ic-veg.svg')}}" class="veg-badge mr-1 d-inline"> <input class="d-inline" type="checkbox" id="defaultCheck1" name="{{$addons['addon_name']}}"> {{$addons['addon_name']}}  
                   </td>
                   <td class="item-price">
                     ₹ {{$addons['addon_price']}}
@@ -322,7 +380,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content animate-bottom">
           <div class="modal-header bot-bd" id="addcustomization_header">
-            <h5> <img id="foodbadge" src="assets/img/ic-nonveg.svg" class="veg-badge mr-1 d-inline"></h5>
+            <h5> <img id="foodbadge" src="{{asset('assets/img/ic-nonveg.svg')}}" class="veg-badge mr-1 d-inline"></h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -331,17 +389,17 @@
             <div class="container mt-4">
                 <div class="row" id="addcustomization">
               <div class="col-sm-8 add-cust-box-pop">
-                <img src="assets/img/ic-veg.svg" class="veg-badge mr-1 d-inline"> Bahawalpur Ganne Ka Ras
+                <img src="{{asset('assets/img/ic-veg.svg')}}" class="veg-badge mr-1 d-inline"> Bahawalpur Ganne Ka Ras
                 <p> Addons that have been added to the dish will come here </p>
               </div>
               <div class="col-sm-4">
                   <div class="input-group d-block float-right">
                                
-                                    <button class="btn btn-light btn-sm float-left" id="minus-btn"><img src="assets/img/ic-minus.svg" class="d-inline"></button>
+                                    <button class="btn btn-light btn-sm float-left" id="minus-btn"><img src="{{asset('assets/img/ic-minus.svg')}}" class="d-inline"></button>
                                 
                                 <input type="number" id="qty_input" class="add-plus-min float-left" value="0" min="0" disabled>
                                 
-                                    <button class="btn btn-light btn-sm float-left" id="plus-btn"><img src="assets/img/ic-plus.svg" class="d-inline"></button>
+                                    <button class="btn btn-light btn-sm float-left" id="plus-btn"><img src="{{asset('assets/img/ic-plus.svg')}}" class="d-inline"></button>
                                 
                             </div>
               </div>
@@ -367,8 +425,9 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/js/custom-menu.js"></script>
-<script type="text/javascript" src="assets/js/smoothscroll.min.js"></script>
+<script type="text/javascript" src="{{ asset('assets/js/custom-menu.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/smoothscroll.min.js') }}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript">
   @foreach($category_names as $data)
   document.querySelector('.{{str_replace(' ','',$data['category_name'])}}').addEventListener('click', function(e) {
@@ -446,7 +505,7 @@
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
           /*make the matching letters bold:*/
-          b.innerHTML = "<img class='search-item-img' src='assets/img/fooditems/" + arrimage[i] + "'> <strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML = "<img class='search-item-img' src='/assets/img/fooditems/" + arrimage[i] + "'> <strong>" + arr[i].substr(0, val.length) + "</strong>";
           b.innerHTML += arr[i].substr(val.length);
           /*insert a input field that will hold the current array item's value:*/
           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
@@ -521,6 +580,16 @@ document.addEventListener("click", function (e) {
 } 
 
 autocomplete(document.getElementById("inputDatabaseName"), allitems , allitemsimages);
+
+$(document).ready(function(){
+        $('.recommend').slick({
+          
+          
+          slidesToShow: 3,
+          slidesToScroll:1,
+          
+                });
+      });
 </script>
 </body>
 </html>

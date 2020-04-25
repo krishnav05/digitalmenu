@@ -8,9 +8,9 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
     <title>Digital Menu</title>
   </head>
   <body class="billing-bg">
@@ -39,7 +39,7 @@
        <div id="saveimage">
        <div class="row mt-5">
          <div class="col-sm-12 text-center">
-           <img src="assets/img/ic-billing-details.svg" class="">
+           <img src="{{ asset('assets/img/ic-billing-details.svg') }}" class="">
          </div>
          <div class="col-sm-12 text-center mt-3">
            <h1>Billing Details</h1>
@@ -62,7 +62,7 @@
             @if($key['item_id'] == $citems['item_id'])
             <tr id="bill{{$k_key['id']}}">
               <td scope="row">
-                <img src="assets/img/ic-{{$citems['item_vegetarian']}}.svg" class="veg-badge mr-1 d-inline">
+                <img src="{{ asset('assets/img/ic-'.$citems['item_vegetarian'].'.svg')}}" class="veg-badge mr-1 d-inline">
                 <h4 class="d-inline">{{$citems['item_name']}}</h4> <span class="golden-text"> x {{$k_key['quantity']}} </span> <br>
                 <span class="small addons-bill-des">Addons: 
                   @foreach($kitchen_addons as $item_addon)
@@ -184,8 +184,8 @@
                   </span>
                 </label>
               </li>
-              <li class="remove-itm-billing"> <a href="" id="remove" data-target="#remove-items-bill" data-toggle="modal" class="d-block">Remove Items from billing  <img src="assets/img/ic-right-carrot.svg" class="float-right"> </a></li>
-              <li class="add-itm-billing">  <a href="itemmenu" class="d-block"> Add items to billing  <img src="assets/img/ic-right-carrot.svg" class="float-right"> </a></li>
+              <li class="remove-itm-billing"> <a href="" id="remove" data-target="#remove-items-bill" data-toggle="modal" class="d-block">Remove Items from billing  <img src="{{asset('assets/img/ic-right-carrot.svg')}}" class="float-right"> </a></li>
+              <li class="add-itm-billing">  <a href="itemmenu" class="d-block"> Add items to billing  <img src="{{asset('assets/img/ic-right-carrot.svg')}}" class="float-right"> </a></li>
             </ul>
           </div>
           <input id="select_save" type="submit" name="" value="SAVE CHANGES" class="btn btn-primary col-sm-11 ml-auto mr-auto mb-3">
@@ -211,7 +211,7 @@
             @if($key['item_id'] == $citems['item_id'])
             <div class="row pt-2 m-auto bd-bot">
               <div class="col-sm-7 pl-5">
-                  <h2 class="change-txt-size txt-balck"><img src="assets/img/ic-{{$citems['item_vegetarian']}}.svg" class="veg-badge mr-1 d-inline "> {{$citems['item_name']}} <span class="golden-text">x {{$k_key['quantity']}}</span> </h2>
+                  <h2 class="change-txt-size txt-balck"><img src="{{asset('assets/img/ic-'.$citems['item_vegetarian'].'.svg')}}" class="veg-badge mr-1 d-inline "> {{$citems['item_name']}} <span class="golden-text">x {{$k_key['quantity']}}</span> </h2>
                  <p class="menu-item-short-desc change-txt-size mb-1 pl-4"> Addons: 
                   @foreach($kitchen_addons as $item_addon)
                     @if($item_addon->order_id == $k_key->id)
@@ -237,7 +237,7 @@
                   {{$citems['item_price']}}
               </div> 
               <div class="col-sm-1 pt-2">
-                  <img src="assets/img/ic-remove.svg"  id="{{$k_key['id']}}" class="bill_remove_item">
+                  <img src="{{asset('assets/img/ic-remove.svg')}}"  id="{{$k_key['id']}}" class="bill_remove_item">
               </div>  
             </div>
             @endif
@@ -264,19 +264,19 @@
           <div class="modal-body pl-0 pr-0 pt-0">
             <ul class="payment-opts">
               <li> 
-                <a href="" class="d-block"> Credit / Debit Card <img src="assets/img/ic-right-carrot.svg" class="float-right carrot-tick"> <img src="assets/img/ic-card-payment.svg" class="float-right">   </a>
+                <a href="" class="d-block"> Credit / Debit Card <img src="{{asset('assets/img/ic-right-carrot.svg')}}" class="float-right carrot-tick"> <img src="{{asset('assets/img/ic-card-payment.svg')}}" class="float-right">   </a>
               </li>
               <li>
-                <a href="" class="d-block"> Paytm <img src="assets/img/ic-right-carrot.svg" class="float-right carrot-tick"> <img src="assets/img/ic-paytm.svg" class="float-right">  </a> 
+                <a href="" class="d-block"> Paytm <img src="{{asset('assets/img/ic-right-carrot.svg')}}" class="float-right carrot-tick"> <img src="{{asset('assets/img/ic-paytm.svg')}}" class="float-right">  </a> 
               </li>
               <li>
-                  <a href="" class="d-block"> UPI <img src="assets/img/ic-right-carrot.svg" class="float-right carrot-tick"> <img src="assets/img/ic-upi.svg" class="float-right">  </a>
+                  <a href="" class="d-block"> UPI <img src="{{asset('assets/img/ic-right-carrot.svg')}}" class="float-right carrot-tick"> <img src="{{asset('assets/img/ic-upi.svg')}}" class="float-right">  </a>
               </li>
               <li>
-                  <a href="" class="d-block"> Net Banking  <img src="assets/img/ic-right-carrot.svg" class="float-right carrot-tick"> </a>
+                  <a href="" class="d-block"> Net Banking  <img src="{{asset('assets/img/ic-right-carrot.svg')}}" class="float-right carrot-tick"> </a>
               </li>
               <li>
-                  <a href="" class="d-block"> Cash <img src="assets/img/ic-right-carrot.svg" class="float-right carrot-tick"> <img src="assets/img/ic-cash.svg" class="float-right ic-cash">  </a>
+                  <a href="" class="d-block"> Cash <img src="{{asset('assets/img/ic-right-carrot.svg')}}" class="float-right carrot-tick"> <img src="{{asset('assets/img/ic-cash.svg')}}" class="float-right ic-cash">  </a>
               </li>
             </ul>
           </div>
@@ -359,7 +359,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/custom-menu.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/custom-menu.js') }}"></script>
     <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
     <script>
       $("#target").on("dblclick", function() {
@@ -382,7 +382,7 @@
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         $.ajax({
                     /* the route pointing to the post function */
-                    url: '/billing',
+                    url: 'billing',
                     type: 'POST',
                     /* send the csrf-token and the input to the controller */
                     data: {_token: CSRF_TOKEN, id:this.id, action:'deleteitem'},
@@ -411,7 +411,7 @@
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         $.ajax({
                     /* the route pointing to the post function */
-                    url: '/bill-pin-check',
+                    url: 'bill-pin-check',
                     type: 'POST',
                     /* send the csrf-token and the input to the controller */
                     data: {_token: CSRF_TOKEN,totaldata: data},
@@ -444,7 +444,7 @@
                     data: {_token: CSRF_TOKEN,base64data: imgData},
                     success: function (data) { 
                         // console.log(data);
-                        window.location = '/signature';
+                        window.location = 'signature';
                     }
                 });
         });

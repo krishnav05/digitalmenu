@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\BusinessTobeRegistered;
 use Illuminate\Support\Str;
 
-
-class CoverController extends Controller
+class SortController extends Controller
 {
     //
-    public function cover($country,$slug){
+    public function sort($country,$slug,$sort)
+    {	
     	//check for valid url
     	$ifexist = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->first();
 
@@ -18,6 +18,6 @@ class CoverController extends Controller
     	{
     		return abort(404);
     	}
-    	return view('cover');
+    	return redirect()->back()->with('message',$sort);
     }
 }

@@ -8,9 +8,9 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
     <title>Digital Menu</title>
   </head>
   <body>
@@ -23,7 +23,7 @@
        <div class="row">
          <div class="col-sm-6 text-center m-auto">
            <a href="itemmenu" class=" d-block mt-5 take-order">
-             <img src="assets/img/ic-take-order.svg" class="">
+             <img src="{{asset('assets/img/ic-take-order.svg')}}" class="">
              <span class="d-block mt-5">Take Order</span>
            </a>
          </div>
@@ -31,7 +31,7 @@
        <div class="row">
          <div class="col-sm-6 text-center m-auto">
            <a href="" class=" d-block mt-5 take-order" data-toggle="modal" data-target="#exampleModal">
-             <img src="assets/img/ic-generate-bill.svg" class="">
+             <img src="{{asset('assets/img/ic-generate-bill.svg')}}" class="">
              <span class="d-block mt-5">Generate Bill</span>
            </a>
          </div>
@@ -79,7 +79,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/custom-menu.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/custom-menu.js') }}"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         $('input').keyup(function(event){
@@ -110,7 +110,7 @@
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         $.ajax({
           /* the route pointing to the post function */
-          url: '/generatebill',
+          url: 'generatebill',
           type: 'POST',
           /* send the csrf-token and the input to the controller */
           data: {_token: CSRF_TOKEN,totaldata: data},

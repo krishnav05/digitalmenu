@@ -10,7 +10,18 @@ use Session;
 class MailController extends Controller
 {
     //
-    public function sendmail(Request $request){
+    public function sendmail($country,$slug,Request $request){
+
+        //check for valid url
+        $ifexist = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->first();
+
+        if($ifexist == null)
+        {
+            return abort(404);
+        }
+        //show tables belonging to the restraunt
+        $business_id = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->pluck('id');
+        
     	$table_number = Session::get('table');
     	$id = $request->data;
 

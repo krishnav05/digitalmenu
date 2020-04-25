@@ -7,9 +7,9 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
     <title>Digital Menu</title>
   </head>
   <body class="feedback-bg">
@@ -22,55 +22,55 @@
         
         <div class="carousel-item active" data-interval="false">
           <h2 class=""> How did you like the Food? </h2>
-          <a href="#" class="col-sm-4" id="excellent"> <img src="assets/img/ic-excellent.svg" class=""> </a>
-          <a href="#" class="col-sm-4" id="good"> <img src="assets/img/ic-good.svg" class=""> </a>
-          <a href="#" class="col-sm-4" id="bad_food"> <img src="assets/img/ic-bad.svg" class=""> </a>
+          <a href="#" class="col-sm-4" id="excellent"> <img src="{{asset('assets/img/ic-excellent.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4" id="good"> <img src="{{asset('assets/img/ic-good.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4" id="bad_food"> <img src="{{asset('assets/img/ic-bad.svg')}}" class=""> </a>
         </div>
         
         <div class="carousel-item" data-interval="false">
           <h2 class="col-sm-12 "> Which Item did you not like? </h2>
-          <a href="#" class="col-sm-12 item-not-like text-left align-items-center"> <img src="assets/img/tikka.jpg" class="item-not-like-pic"> Bahawalpur Ganne Ka Ras </a>
-          <a href="#" class="col-sm-12 item-not-like text-left align-items-center"> <img src="assets/img/tikka.jpg" class="item-not-like-pic"> Paneer Tikka </a>
-          <a href="#" class="col-sm-12 item-not-like text-left align-items-center"> <img src="assets/img/tikka.jpg" class="item-not-like-pic"> Steamed Rice </a>
+          <a href="#" class="col-sm-12 item-not-like text-left align-items-center"> <img src="{{asset('assets/img/tikka.jpg')}}" class="item-not-like-pic"> Bahawalpur Ganne Ka Ras </a>
+          <a href="#" class="col-sm-12 item-not-like text-left align-items-center"> <img src="{{asset('assets/img/tikka.jpg')}}" class="item-not-like-pic"> Paneer Tikka </a>
+          <a href="#" class="col-sm-12 item-not-like text-left align-items-center"> <img src="{{asset('assets/img/tikka.jpg')}}" class="item-not-like-pic"> Steamed Rice </a>
         </div>
         
          <div class="carousel-item" data-interval="false">
           <h2 class="col-sm-12 "> How did you like the Service? </h2>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-excellent.svg" class=""> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-good.svg" class=""> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-bad.svg" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-excellent.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-good.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-bad.svg')}}" class=""> </a>
         </div>
 
         <div class="carousel-item" data-interval="false">
           <h2 class="col-sm-12 "> How would you rate the staff behaviour? </h2>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-cheerfully.svg" class=""> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-barely.svg" class=""> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-no-greet.svg" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-cheerfully.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-barely.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-no-greet.svg')}}" class=""> </a>
         </div>
         
         <div class="carousel-item" data-interval="false">
           <h2 class="col-sm-12 "> How would you rate speed of service? </h2>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-very-fast.svg" class="mt-3"> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-fast.svg" class="mt-3"> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-slow.svg" class="mt-3"> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-very-fast.svg')}}" class="mt-3"> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-fast.svg')}}" class="mt-3"> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-slow.svg')}}" class="mt-3"> </a>
         </div>
         
         <div class="carousel-item" data-interval="false">
           <h2 class="col-sm-12 "> How would you rate the cleanliness? </h2>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-excellent.svg" class=""> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-good.svg" class=""> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-bad.svg" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-excellent.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-good.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-bad.svg')}}" class=""> </a>
         </div>
 
         <div class="carousel-item" data-interval="false">
           <h2 class="col-sm-12 "> How was your overall dining experience? </h2>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-excellent.svg" class=""> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-good.svg" class=""> </a>
-          <a href="#" class="col-sm-4"> <img src="assets/img/ic-bad.svg" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-excellent.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-good.svg')}}" class=""> </a>
+          <a href="#" class="col-sm-4"> <img src="{{asset('assets/img/ic-bad.svg')}}" class=""> </a>
         </div>
 
         <div class="carousel-item" data-interval="false">
-          <img src="assets/img/ic-gray-smile.svg">
+          <img src="{{asset('assets/img/ic-gray-smile.svg')}}">
           <h2 class="col-sm-12 mt-5"> Thank You<br>for your invaluable feedback! </h2>
         </div> 
       
@@ -83,7 +83,7 @@
   <div class="container fixed-bottom">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <img src="assets/img/ic-feedback-hotels.svg">
+        <img src="{{asset('assets/img/ic-feedback-hotels.svg')}}">
       </div>
     </div>
     <div class="row">

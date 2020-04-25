@@ -7,9 +7,9 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/menu-style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap" rel="stylesheet"> 
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-ipad-retina-display.png" /> 
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/img/apple-touch-icon-ipad-retina-display.png') }}" /> 
     <title>Digital Menu</title>
   </head>
   <body class="thank-bg">
@@ -17,7 +17,7 @@
   <div class="container mt-5 pt-5">
     <div class="row mt-5 pt-5 thanks-feedback">
       <div class="col-sm-12 text-center">
-        <img src="assets/img/ic-thanks-namaste.svg">
+        <img src="{{asset('assets/img/ic-thanks-namaste.svg')}}">
         <h3> Thank You<br>for dining with us </h3>
         <p class="small"> We hope you had a great experience. </p>
       </div>
@@ -27,10 +27,10 @@
       </div>
        <div class="col-sm-12 text-center">
           <div class="col mt-4">
-              <input type="submit" name="" value="GIVE FEEDBACK" class="btn btn-primary col-sm-4" onclick="window.location = '/feedback';">
+              <input type="submit" name="" value="GIVE FEEDBACK" class="btn btn-primary col-sm-4" onclick="window.location = 'feedback';">
             </div>
             <div class="col mt-4 mb-3">
-              <a href="/" class="m-auto text-center golden-text">SKIP</a>
+              <a href="./" class="m-auto text-center golden-text">SKIP</a>
             </div>
        </div>     
     </div>
