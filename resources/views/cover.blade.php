@@ -22,7 +22,7 @@
                <h1 class="display-2">Indus Express</h1>
            </div>
            <div class="col-sm-12 text-center mt-5 pt-5">
-               <a href="{{Request::url()}}/itemmenu"> Start Ordering <img src="{{asset('assets/img/start-order.png')}}" class="ml-2"> </a>
+               <a href="itemmenu"> Start Ordering <img src="{{asset('assets/img/start-order.png')}}" class="ml-2"> </a>
            </div>
            <div class="col-sm-12 text-center mt-5 pt-5">
                 <img src="{{asset('assets/img/brand-badge.svg')}}" class="img-fluid">
