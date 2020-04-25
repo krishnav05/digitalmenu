@@ -145,9 +145,11 @@ $('.plus').on('click',function(event) {
                                     if(data.item_quantity == 0){
                                         var temp = '#qty_input' + data.item_id;
                                         $(temp).parent('div').parent('div').children('button').show();
+                                        $(temp).val(0);
                                         $(temp).parent('div').hide();
                                         var temp1 = '#rec_qty_input' + data.item_id;
                                         $(temp1).parent('div').parent('div').children('button').show();
+                                        $(temp1).val(0);
                                         $(temp1).parent('div').hide();
                                     }
                                     else{
@@ -273,9 +275,11 @@ $('.minus').on('click',function(event) {
                                     if(data.item_quantity == 0){
                                         var temp = '#qty_input' + data.item_id;
                                         $(temp).parent('div').parent('div').children('button').show();
+                                        $(temp).val(0);
                                         $(temp).parent('div').hide();
                                         var temp1 = '#rec_qty_input' + data.item_id;
                                         $(temp1).parent('div').parent('div').children('button').show();
+                                        $(temp1).val(0);
                                         $(temp1).parent('div').hide();
                                     }
                                     else{

@@ -580,7 +580,8 @@ document.addEventListener("click", function (e) {
 } 
 
 autocomplete(document.getElementById("inputDatabaseName"), allitems , allitemsimages);
-
+window.previous_postition = 0;
+window.distance = 0;
 $(document).ready(function(){
         $('.recommend').slick({
           
@@ -590,7 +591,15 @@ $(document).ready(function(){
           
                 });
 $(document).scroll(function () {
-  $('.recommended-box').slideUp('slow');
+  var current_position = $(document).scrollTop();
+  window.distance = window.previous_postition - current_position;
+  if(window.distance<0){
+    window.distance = window.distance*-1;
+  }
+  if(window.distance>15){
+  $('.recommended-box').slideUp('slow');  
+  }
+  window.previous_postition = current_position;
 });
       });
 </script>
