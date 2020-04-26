@@ -226,8 +226,9 @@
         </div>
       </div> 
       <div class="col-sm-7">
-        
-        <!-- <span class="d-inline ml-4 item-discount-inline change-txt-size">  <img src="assets/img/ic-discount.svg" class="mr-1"> {{$idata['discount']}}% off on this item </span> -->
+        @if($idata['item_id'] == 'A3' || $idata['item_id'] == 'A5')
+        <span class="d-inline ml-4 item-discount-inline change-txt-size">  <img src="/assets/img/ic-discount.svg" class="mr-1"> {{$idata['discount']}}% off on this item </span>
+        @endif
       </div>                  
     </div>
     @else
@@ -246,8 +247,9 @@
         </div>
       </div> 
       <div class="col-sm-7">
-        
-        <!-- <span class="d-inline ml-4 item-discount-inline change-txt-size">  <img src="assets/img/ic-discount.svg" class="mr-1"> {{$idata['discount']}}% off on this item </span> -->
+        @if($idata['item_id'] == 'A3' || $idata['item_id'] == 'A5')
+        <span class="d-inline ml-4 item-discount-inline change-txt-size">  <img src="/assets/img/ic-discount.svg" class="mr-1"> {{$idata['discount']}}% off on this item </span>
+        @endif
       </div>                  
     </div>
     @endif
