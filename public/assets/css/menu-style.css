@@ -9,7 +9,7 @@ body{
 .header-1{
 			background: url('../img/header-1-bg.png')top right no-repeat;
 			height: 260px;
-			padding-top: 6rem;
+			/*padding-top: 6rem;*/
 		 }
 .header-2{
 			
@@ -869,3 +869,29 @@ margin-right: 10px;}
 .slick-slide h6 a{
 	color: #000;
 }
+
+
+/*Offers Badge Start*/
+.offers-top-badge{
+					background: #FFF8E4;
+					border-radius: 6px;
+					padding: 1rem;
+					color: #000;
+					list-style: none;
+					margin-top: 8rem;
+					font-size: 12px;
+				 }
+.offers-top-badge li{
+						display: inline;
+						margin-right: 1rem;
+						margin-left: 1rem;
+					}
+.offers-top-badge li a{
+						color: #DCAD2B;
+						text-decoration: none;
+					  }
+.offers-discount-pg a{
+						color: #000;
+						font-size: 18px;
+					 }
+/*Offers Badge End*/

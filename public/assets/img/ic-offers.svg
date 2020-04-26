@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48.318" height="22" viewBox="0 0 48.318 22">
+  <g id="ic-offers" transform="translate(-0.001 2.999)">
+    <path id="Subtraction_23" data-name="Subtraction 23" d="M47,16H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H47a2,2,0,0,1,1.318.5L38,8l10.318,7.5A2,2,0,0,1,47,16Z" fill="#cb8823"/>
+    <text id="OFFER" transform="translate(4 12.001)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="10" font-family="Oxygen" letter-spacing="0.03em"><tspan x="0" y="0">OFFER</tspan></text>
+  </g>
+</svg>

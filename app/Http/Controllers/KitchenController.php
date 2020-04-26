@@ -12,6 +12,7 @@ use DB;
 use Session;
 use App\BusinessTobeRegistered;
 use Illuminate\Support\Str;
+use App\AlertNotification;
 
 class KitchenController extends Controller
 {
@@ -268,6 +269,48 @@ class KitchenController extends Controller
       );
       return response()->json($response); 
       }
+    }
+
+    public function notify($country,$slug)
+    {
+      //check for valid url
+      $ifexist = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->first();
+
+      if($ifexist == null)
+      {
+        return abort(404);
+      }
+      //show tables belonging to the restraunt
+      $business_id = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->pluck('id');
+
+      $table_number = Session::get('table');
+
+      $new_alert = new AlertNotification;
+      $new_alert->table_number = $table_number;
+      $new_alert->business_id = $business_id[0];
+      $new_alert->save();
+
+      $response = array(
+        'status' => 'success',
+      );
+      return response()->json($response);
+    }
+
+    public function getnotifications($country,$slug)
+    {
+      //check for valid url
+      $ifexist = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->first();
+
+      if($ifexist == null)
+      {
+        return abort(404);
+      }
+      //show tables belonging to the restraunt
+      $business_id = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->pluck('id');
+
+      $notify_details = AlertNotification::where('business_id',$business_id[0])->get();
+
+      return view('waiter_notifications',['notify_details' => $notify_details]);
     }
 
 }

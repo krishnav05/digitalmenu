@@ -98,3 +98,14 @@ Route::get('register_business',function(){
 });
 //no change needed
 Route::post('upload_docs','UploadDocsController@upload');
+
+//qr codes links
+Route::get('/brand/{country}/{slug}/qrcode','QrcodeController@display');
+
+Route::post('/brand/{country}/{slug}/alertnotification','KitchenController@notify');
+
+Route::get('/brand/{country}/{slug}/notification','KitchenController@getnotifications');
+
+Route::get('/brand/{country}/{slug}/offers-discounts',function(){
+	return view('offers-discounts');
+});

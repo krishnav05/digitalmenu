@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73.086" height="22" viewBox="0 0 73.086 22">
+  <g id="ic-discount-badge" transform="translate(0 2.999)">
+    <path id="Subtraction_23" data-name="Subtraction 23" d="M71.812,21H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H71.812a2,2,0,0,1,1.276.46L57.242,10.5,73.086,20.542A2,2,0,0,1,71.812,21Z" transform="translate(-0.001 -2)" fill="#cb8823"/>
+    <text id="Discount" transform="translate(4 12.001)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-width="1" font-size="10" font-family="Oxygen" letter-spacing="0.03em"><tspan x="0" y="0">DISCOUNT</tspan></text>
+  </g>
+</svg>

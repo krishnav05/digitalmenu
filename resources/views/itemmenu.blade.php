@@ -180,6 +180,19 @@
 
 @foreach($category_names as $cdata)
 <div class="container-fluid header-1 pure-veg-{{$cdata['is_pure_veg']}}" id="{{str_replace(' ','',$cdata['category_name'])}}">
+  @if($loop->first)
+  <!-- offers badge start here -->
+      <div class="container">
+        <div class="pl-5 pr-5">
+          <ul class="offers-top-badge">
+          <li> <img src="{{asset('assets/img/ic-offers.svg')}}"> 1+1 on drinks offer </li>
+          <li> <img src="{{asset('assets/img/ic-discount-badge.svg')}}"> 10% OFF on all items </li>
+          <li> <a href="offers-discounts" class="float-right mr-2">All OFFERS</a> </li>
+        </ul>
+        </div>
+      </div> 
+      <!-- offers badge end here --> 
+  @endif
   <div class="container">
     <h1 class="pt-5 ml-4 pl-5"> {{$cdata['category_name']}} </h1>
   </div>

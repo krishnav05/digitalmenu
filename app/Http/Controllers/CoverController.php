@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\BusinessTobeRegistered;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Input;
+use Session;
 
 
 class CoverController extends Controller
 {
     //
-    public function cover($country,$slug){
+    public function cover($country,$slug,Request $request){
     	//check for valid url
     	$ifexist = BusinessTobeRegistered::where(Str::lower('country_code'),Str::lower($country))->where(Str::lower('slug'),Str::lower($slug))->where('enable','1')->first();
 
@@ -18,6 +20,11 @@ class CoverController extends Controller
     	{
     		return abort(404);
     	}
+        if ($request->has('q')) {
+    //
+            Session::put('table', $request->input('q'));
+}
+
     	return view('cover');
     }
 }

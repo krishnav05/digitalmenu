@@ -137,7 +137,7 @@
           </table>
         </div>  
        <div class="row mt-5">
-         <input type="button" name="" data-toggle="modal" data-target="#exampleModal" value="CONFIRM ORDER" class="btn btn-primary col mt-5">
+         <input type="button" id="alertnotify" name="" data-toggle="modal" data-target="#exampleModal" value="CONFIRM ORDER" class="btn btn-primary col mt-5">
         
        </div>
        @endif
@@ -366,6 +366,23 @@ $('.kitchencustomize').on('click',function(event){
         });
       });
 
+      //update someone click to confirm order 
+      $('#alertnotify').on('click',function(event){
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        $.ajax({
+          /* the route pointing to the post function */
+          url: 'alertnotification',
+          type: 'POST',
+          /* send the csrf-token and the input to the controller */
+          data: {_token: CSRF_TOKEN},
+          dataType: 'JSON',
+          /* remind that 'data' is the response of the AjaxController */
+          success: function (data) {
+            if(data.status == 'success'){
+            }
+          }
+        });
+      });
 </script>
     
   </body>
