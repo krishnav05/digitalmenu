@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\HelperTableManager;
 use Session;
 use App\Kitchen;
+use App\BusinessTobeRegistered;
+use Illuminate\Support\Str;
 
 class OrderSentKitchen extends Controller
 {   
