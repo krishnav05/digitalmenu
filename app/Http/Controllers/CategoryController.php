@@ -60,6 +60,7 @@ class CategoryController extends Controller
 			return view('itemmenu',['category_names'	=> $category_names, 'category_items' => $category_items, 'item_details' => $item_details, 'item_addons' => $item_addons,'kitchen_status' => $kitchen_status,'total_items' => $total_items,'recommended_items' => $recommended_items]);
 		}
 		elseif (app()->getLocale() == 'hi') {
+			$recommended_items = RecommendationItem::where('business_id',$business_id[0])->get();
 
 			$category_items = CategoryItem::where('business_id',$business_id[0])->get();
 			$category_names = Category::where('business_id',$business_id[0])->get();
@@ -104,7 +105,7 @@ class CategoryController extends Controller
 
 			}
 			$category_names = $category_names->toArray();
-			return view('itemmenu',['category_names'	=> $category_names, 'category_items' => $category_items, 'item_details' => $item_details, 'item_addons' => $item_addons,'kitchen_status' => $kitchen_status,'total_items' => $total_items]);
+			return view('itemmenu',['category_names'	=> $category_names, 'category_items' => $category_items, 'item_details' => $item_details, 'item_addons' => $item_addons,'kitchen_status' => $kitchen_status,'total_items' => $total_items,'recommended_items' => $recommended_items]);
 		}
 	}
 }
