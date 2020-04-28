@@ -137,7 +137,7 @@
           </table>
         </div>  
        <div class="row mt-5">
-         <input type="button" id="alertnotify" name="" data-toggle="modal" data-target="#exampleModal" value="CONFIRM ORDER" class="btn btn-primary col mt-5">
+         <input type="button" id="alertnotify" name="" value="CONFIRM ORDER" class="btn btn-primary col mt-5">
         
        </div>
        @endif
@@ -378,7 +378,11 @@ $('.kitchencustomize').on('click',function(event){
           dataType: 'JSON',
           /* remind that 'data' is the response of the AjaxController */
           success: function (data) {
+            if(data.status == 'no'){
+              window.location = data.url;
+            }
             if(data.status == 'success'){
+              $('#exampleModal').modal('show');
             }
           }
         });

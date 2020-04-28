@@ -23,6 +23,7 @@ class CoverController extends Controller
         if ($request->has('q')) {
     //
             Session::put('table', $request->input('q'));
+            Session::put('qrc','1');
 }
 
     	return view('cover');

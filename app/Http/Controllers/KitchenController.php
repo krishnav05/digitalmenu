@@ -290,6 +290,15 @@ class KitchenController extends Controller
       $new_alert->business_id = $business_id[0];
       $new_alert->save();
 
+      if(Session::has('qrc')){
+        Kitchen::where('business_id',$business_id[0])->where('table_number',$table_number)->update(['confirm_status' => 'yes']);
+        $response = array(
+        'status' => 'no',
+        'url' => 'ordersentkitchen'
+      );
+      return response()->json($response);
+      }
+
       $response = array(
         'status' => 'success',
       );
