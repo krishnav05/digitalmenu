@@ -325,7 +325,7 @@ $('#all_veg_nveg').on('click',function(){
 
 // change theme to dark
 $('#theme-color-dark').click(function () {
-    $('head').append('<link rel="stylesheet" href="{{ asset("assets/css/menu-dark-style.css") }}" type="text/css" id="menu-dark" />');
+    $('head').append('<link rel="stylesheet" href="/assets/css/menu-dark-style.css" type="text/css" id="menu-dark" />');
 });
 
 // change theme to light
