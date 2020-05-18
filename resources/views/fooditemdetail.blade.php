@@ -111,7 +111,7 @@
            <h3 class="p-2 prep-box">
              <div class="col-sm-12"> <img src="{{asset('assets/img/prep-time.svg')}}"> </div>
              <span class="col-sm-12"> Time of Prepration </span>
-             <span class="col-sm-12 prep-time">{{$key['preparation_time']}}</span>
+             <span class="col-sm-12 prep-time">{{$key['preparation_time']}} minutes</span>
            </h3>
          </div>
        </div>
